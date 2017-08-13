@@ -1,0 +1,22 @@
+{
+  "name": "webpack-sample-project",
+  "version": "1.0.0",
+  "description": "WebPack",
+  "main": "index.js",
+  "scripts": {
+    "start":"webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flyinmysun/webpack-sample-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flyinmysun/webpack-sample-project/issues"
+  },
+  "homepage": "https://github.com/flyinmysun/webpack-sample-project#readme",
+  "devDependencies": {
+    "webpack": "^3.5.4"
+  }
+}

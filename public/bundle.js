@@ -84,7 +84,7 @@ document.querySelector("#root").appendChild( greeter() );   //方法？
 
 module.exports = function() {
     var greet = document.createElement('div');
-    greet.textContent = "Hi there and greetings!";
+    greet.textContent = "Hi there and greetingswwerwer!";
     return greet;
 };
 

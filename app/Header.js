@@ -26,10 +26,11 @@ export default class Header extends React.Component{
     render(){
         const {name} = this.props;
         //const name = this.props.name;
-        return <div className="header" style={{height:'50px'}}>
+        return <div className="header" style={{height:'100px'}}>
             {this.state.name}<br/>
-            {this.props.age}
-            <button onClick={()=>{
+            {this.props.age}<br/>
+            {this.props.address}<br/>
+            <button className="btn" onClick={()=>{
                 this.updateName();
             }}>
                 修改名字

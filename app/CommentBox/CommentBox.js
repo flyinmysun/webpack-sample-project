@@ -9,18 +9,28 @@ export default class CommentBox extends React.Component{
             commentArr:[
                 {author:"Lion",body:"this is Lion's comment"},
                 {author:"John",body:"this is John's comment"},
-                {author:"cy",body:"this is John's comment"},
-                {author:"zww",body:"this is John's comment"},
             ]
         }
+    }
+
+    getNewList(addData){
+        const  oldArr = this.state.commentArr;
+        const  newArr = Object.assign([],oldArr,[addData]);
+        //const  newArr = oldArr.concat([addData])
+        console.log(newArr)
+
+        this.setState({oldArr:newArr})
+
     }
 
     render(){
         return(
             <div className="comment-box">
                 <h1>Comments</h1>
+                <CommentForm getNewData = {(addData)=>{
+                    this.getNewList(addData)
+                }} />
                 <CommentList commentListContent = {this.state.commentArr}/>
-                <CommentForm />
             </div>
         )
     }
@@ -33,15 +43,16 @@ class CommentList extends React.Component{
             commentListContent:props.commentListContent
         }
     };
+
     render(){
-        let data = this.state.commentListContent.map((item,index) => {
+        let commentData = this.state.commentListContent.map((item,index) => {
             return(
                 <Comment key={index} author={item.author} body={item.body}/>
             )
         })
         return(
             <div className="comment-list">
-                {data}
+                {commentData}
             </div>
         )
     }
@@ -68,14 +79,31 @@ class CommentForm extends React.Component{
     constructor(props){
         super(props)
     }
+    getInpVal(){
+        //e.preventDefault();
+        const author = this.refs.author.value;
+        const body = this.refs.body.value;
+        console.log(author,body);
+
+        this.props.getNewData({author: author, body: body});
+
+        document.getElementById("myForm").reset()
+    }
+
+    componentDidMount(){
+        this.getInpVal();
+    }
+
 
     render(){
         return(
-            <div className="comment-form">
-                <input type="text" placeholder="Your name" />
-                <input type="text" placeholder="Your comment"/>
-                <input type="submit" value='submit'/>
-            </div>
+            <form className="comment-form" id="myForm">
+                <input type="text" placeholder="Your name" ref="author"/>
+                <input type="text" placeholder="Your comment" ref="body"/>
+                <input type="button" value='提交'onClick={(e) =>{
+                    this.getInpVal(e);
+                }}/>
+            </form>
         )
     }
 

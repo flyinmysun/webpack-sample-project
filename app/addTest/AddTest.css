@@ -1,0 +1,73 @@
+body {
+    background: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+    padding: 30px;
+}
+.clearfix:after { content:"."; display:block; height:0; visibility:hidden; clear:both; }
+a {
+    color: #4183c4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+h1 {
+    border-bottom: 1px solid #ddd;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+h2 {
+    border-bottom: 1px solid #eee;
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+p, ul {
+    margin: 15px 0;
+}
+
+ul {
+    padding-left: 30px;
+}
+
+ input[type=text] {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 6px;
+}
+ button{
+     display: inline-block;
+     padding: 6px;
+     border: 1px solid #4183c4;
+     width: 60px;
+     background-color: #4183c4;
+     color: #ffffff;
+     margin-left: 20px;
+ }
+ .addList{padding: 20px;}
+ .num{display: inline-block;width: 50px;margin-right: 10px;}
+ .fundName{width: 800px;float: left;font-size: 20px;}
+ .deleteBtn{padding: 6px;float: right;}

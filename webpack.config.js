@@ -32,6 +32,10 @@ module.exports = {
                     }
                 ]
             },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2|png)\w*/,  //针对于fontawesome文件
+                loader: "file-loader",
+            },
 
         ]
     }

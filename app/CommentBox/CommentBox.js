@@ -14,12 +14,18 @@ export default class CommentBox extends React.Component{
     }
 
     getNewList(addData){
+        console.log(addData)
         const  oldArr = this.state.commentArr;
-        const  newArr = Object.assign([],oldArr,[addData]);
-        //const  newArr = oldArr.concat([addData])
-        console.log(newArr)
+        let newArr = [...oldArr,addData];
+        //let newArr = oldArr.concat([addData]);
+        //const  newArr = Object.assign([],oldArr,[addData]);
 
-        this.setState({oldArr:newArr})
+        //console.log(newArr)
+
+        //this.setState(Object.assign({},this.state,{commentArr:newArr}));
+        this.setState({...this.state,commentArr:newArr});
+
+        //this.setState({oldArr:newArr})
 
     }
 
@@ -40,12 +46,12 @@ class CommentList extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            commentListContent:props.commentListContent
+            //commentListContent:props.commentListContent
         }
     };
 
     render(){
-        let commentData = this.state.commentListContent.map((item,index) => {
+        let commentData = this.props.commentListContent.map((item,index) => {
             return(
                 <Comment key={index} author={item.author} body={item.body}/>
             )

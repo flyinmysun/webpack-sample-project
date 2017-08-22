@@ -58,7 +58,7 @@ ul {
     border: 1px solid #ccc;
     padding: 6px;
 }
- button{
+.btn{
      display: inline-block;
      padding: 6px;
      border: 1px solid #4183c4;

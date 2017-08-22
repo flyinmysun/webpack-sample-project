@@ -87,7 +87,7 @@ export default class AddTest extends React.Component{
                 <div style={{paddingLeft:"20px"}} className="clearfix" >
                     <div style={{float:"left",marginRight:"30px"}}>
                         <input type="text" id="fundInput" placeholder="请输入需要增加的基金" ref="fundName"/>
-                        <button onClick={()=>{
+                        <button className="btn" onClick={()=>{
                             this.addItemData()
                         }}>增加</button>
                     </div>
@@ -97,7 +97,7 @@ export default class AddTest extends React.Component{
                             //console.log(evt.target.value);
                             this.changeVal(evt)
                         }}/>
-                        <button onClick={()=>{
+                        <button className="btn" onClick={()=>{
                             this.sureModify()
                         }}>修改</button>
                     </div>

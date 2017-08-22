@@ -8,7 +8,7 @@ body {
 }
 .clearfix:after { content:"."; display:block; height:0; visibility:hidden; clear:both; }
 .infoWrap{height: 40px;width: 140px}
-.infoWrap span{display: inline-block;padding: 5px;}
+.infoWrap span{display: inline-block;padding: 2px;}
 .num,.name{float: left;color: #666666}
 .total{float: right;margin-right: 5px;color: firebrick}
 .voteBtn{width: 100px;height: 30px;background-color: #4183c4;color: #ffffff;text-align: center;border: none;
